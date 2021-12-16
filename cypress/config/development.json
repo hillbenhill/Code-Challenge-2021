@@ -1,0 +1,15 @@
+{
+  "testFiles": "**/*.{feature,features}",
+  "env": {
+    "something": "development",
+
+    "URL3": "https://viewpoint.glasslewis.com/",
+
+    "user2": "BH01",
+    "User": "User2",
+    "passWord": "pass",
+    "emptyLoginErrorMsg": "The fields USERNAME and PASSWORD are required."
+
+
+  }
+}

@@ -1,0 +1,33 @@
+{
+
+  "projectId": "",
+  "baseUrl": "https://viewpoint.glasslewis.com/WD/?siteId=DemoClient ",
+
+
+  "env": {
+
+    "my-user": "BH001",
+    "userName": "user2",
+    "passWord": "pass"
+   
+
+
+
+
+
+
+  },
+  "chromeWebSecurity": false,
+  "reporter": "cypress-junit-reporter",
+
+  "reporterOptions": {
+    "configFile": "reporter-config.json"
+  },
+  "testFiles": "**/*.{feature,features}",
+  "execTimeout": 90000,
+  "screenshotOnRunFailure": true
+
+
+}
+
+

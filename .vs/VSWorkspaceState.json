@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\cypress",
+    "\\cypress\\cucumber-json",
+    "\\cypress\\integration",
+    "\\cypress\\integration\\DemoTests",
+    "\\cypress\\screenshots",
+    "\\cypress\\screenshots\\DemoTests",
+    "\\cypress\\support",
+    "\\cypress\\videos",
+    "\\cypress\\videos\\DemoTests"
+  ],
+  "SelectedNode": "\\package.json",
+  "PreviewInSolutionExplorer": true
+}
