@@ -6,3 +6,8 @@ specsync.json
 error.txt
 specsync.lic
 **/node_modules
+**/cucumber-json
+**/screenshots
+**/downloads
+**/results
+**videos
