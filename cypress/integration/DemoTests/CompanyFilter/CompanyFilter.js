@@ -29,7 +29,7 @@ Then('the user lands onto the {string} vote card page.', (companyDisplayed) => {
     cy.log(Cypress.env('ATVI_securityId'))
     // the url should include ATVI_securityId 17453
     cy.url()
-    cy.get('#txt-detail-info-Security-Id-From-Distributor')
+    cy.get('#txt-detail-info-Security-Id-From-Distributor').should('contain', '00507V109')
 
 })
 
