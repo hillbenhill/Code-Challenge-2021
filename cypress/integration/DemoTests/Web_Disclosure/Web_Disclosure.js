@@ -4,7 +4,7 @@ import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps'
 Given('user is on the landing page for WD site', () => {
     cy.visit(Cypress.env('WDURL'))
     cy.url().should('eq', Cypress.env('WDURL'))
-    cy.log(Cypress.env())
+    //cy.log(Cypress.env())
 })
 
 Given('the Country filter is available', () => {
@@ -24,11 +24,32 @@ When('clicks on Update button for the country filter list', () => {
     // to avoid race condition on click update and to use data to verify only Belgium is displayed
     cy.intercept('https://viewpoint.glasslewis.com/WD/Api/Data//Issuers').as('getCountry')
 
+    // Intercept API call to data and inspect response data
+    cy.intercept('https://viewpoint.glasslewis.com/WD/Api/Data//Issuers', (req) => {
+        req.on('response', (res) => {
+    // this will be called after all `before:response` handlers and after the `req.continue` handler
+    // but before the response is sent to the browser
+
+            // Get responce boby and count the number of accounts and get the country 
+            const object = res.body
+
+            console.log(object.Data)
+            for (let i = 0; i < object.Data.length; i++) {
+                console.log(object.Data[i].Country);
+
+            }
+            
+        })
+    })
+
+
+
 
     cy.get('#multiselect-static-target-CountryFilter > .btn-container > #btn-update').then(($btn) => {
         const cls = $btn.attr('class')
         cy.wrap($btn).should('contain', 'Update').click()
         // get at the response body from the the API call 
+
         cy.wait('@getCountry').then((response) => {
             // can access the low level interception that contains the request body,
             // response body, status, etc
