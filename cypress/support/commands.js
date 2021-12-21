@@ -31,6 +31,8 @@
     cy.get('#pwd').type(Cypress.env('My-PW'))
 
 });*/
+
+
 Cypress.Commands.add("login", (URL, username, password) => {
     //adding a new command named login
     cy.visit(URL)
@@ -39,6 +41,9 @@ Cypress.Commands.add("login", (URL, username, password) => {
     cy.get('#btn-submit-login').click();
    // cy.contains("Sign in").click();
 });
+
+
+
 
 
 

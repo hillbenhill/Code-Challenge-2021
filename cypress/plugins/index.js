@@ -71,6 +71,7 @@ module.exports = (on, config) => {
     on('task', tasks)
     return tasks, getConfigurationByFile(file)
 
+
 }
 
 // in plugins/index.js
