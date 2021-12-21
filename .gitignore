@@ -20,3 +20,5 @@ specsync.lic
 *.suo
 *.suo
 *.sqlite
+.vs/Code Challenge 2021/v16/.suo
+.vs*/
