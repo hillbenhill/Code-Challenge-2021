@@ -26,14 +26,16 @@ module.exports = (on, config) => {
 // promisified fs module
 const fs = require('fs-extra')
 const path = require('path')
-const dbConfig = require('C:\\Users\\ben.hill\\source\\repos\\Code Challenge 2021\\cypress.json')
+// only need to use if you want to pass in a connection string from cypress.json 
+const dbConfig = require('C:/Users/ben.hill/source/repos/Code Challenge 2021/cypress.json')
 
 function getConfigurationByFile(file) {
-    const pathToConfigFile = path.resolve('..','Code Challenge 2021\\cypress\\config',`${file}.json`)
+    const pathToConfigFile = path.resolve('..','Code Challenge 2021/cypress/config',`${file}.json`)
     return fs.readJson(pathToConfigFile)
 }
 
 const cucumber = require('cypress-cucumber-preprocessor').default
+
 const sqlServer = require('cypress-sql-server');
 
 module.exports = (on, config) => {

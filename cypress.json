@@ -17,7 +17,7 @@
 
 
   },
-  "chromeWebSecurity": false,
+  "chromeWebSecurity": true,
   "reporter": "cypress-junit-reporter",
 
   "reporterOptions": {

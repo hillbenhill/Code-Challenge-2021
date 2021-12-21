@@ -71,12 +71,23 @@ Based on this can you:
 2.    Provide a full set of automated tests using Selenium Webdriver or Cypress that checks if the actual behavior matches to the acceptance criteria.
 3.    Provide instructions on how to run your tests.
 
-**Clone the Repo from github and run npm install then run npx cypress run to execute the test headlessly.**
+
 
 4.    Based on what you found difficult or easy from the automation exercise please give some feedback that development team could use to improve the system under test to make it easier to automate.
 
 **The use of data attributes would make it easier to target DOM elements that are otherwise renderd with a dynamic ID**
 
+### How to run the tests
+
+1. Clone the Repo from github and 
+2. run npm install then 
+3. run npx cypress run to execute the test headlessly
+4. or 
+
+    npm run cy:run:chrome
+    npm cy:run:firefox
+
+-----------------
 Technical requirements
 
 1. Cypress was used as the testing framework
