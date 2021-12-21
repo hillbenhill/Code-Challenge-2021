@@ -1,4 +1,4 @@
-Feature: Being a plugin handling DataTable scenario
+Feature: Account Location Filter
 
 #Web Disclosure (WD) is a public site where our clients can make the votes public.
 
