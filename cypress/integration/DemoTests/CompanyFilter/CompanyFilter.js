@@ -5,12 +5,24 @@ import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps'
 //Company filter test - select company filter link from page 2 of the grid list  
 When('user clicks the Company Name {string} hyper-link', (companyLink) => {
 
+    // set alias on loaded client page  
+    cy.intercept('https://viewpoint.glasslewis.com/WD/MeetingDetail/?siteId=DemoClient&securityId=17453&meetingId=958156').as('CompanyName')
+
     cy.get('[aria-label="Go to the next page"]').click()
     // assert that page 
     cy.get('.k-current-page >.k-link').should('contain', '2')
 
     // click on element that contains company link 
     cy.contains(companyLink).click()
+
+    // wait on client page to load 
+    cy.wait('@CompanyName').then((response) => {
+        // can access the low level interception that contains the request body,
+        // response body, status, etc
+
+        //cy.log(response)
+
+    })
 
 })
 

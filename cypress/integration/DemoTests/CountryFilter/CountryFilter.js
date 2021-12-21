@@ -8,7 +8,8 @@ var countryElementtdRowCount = 0;
 
 // test that the country filter is visible
 Given('the Country filter is available', () => {
-
+    // wait on homepage to load
+    cy.wait('@homepage')
     cy.get('#txt-multiselect-static-search-CountryFilter').should('have.attr', 'type', 'search').and('be.visible')
 })
 
