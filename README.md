@@ -1,3 +1,68 @@
+
+ 
+
+# Test Plan 
+### Author: Ben Hill 
+#### Date: 21/12/21
+##### Project: Code Challenge
+
+
+
+
+#### Introduction
+This document describes the plan for testing Web Disclosure (WD) 
+a public site Glass Lewis clients can make the proxy votes public.
+
+This Test Plan document supports the following objectives:
+
+- Test the client facing functionality -- Country filter list and the Company name vote card 
+  
+- List the recommended test requirements (high level).
+ -- Run tests against the acceptance criteria 
+- Recommend and describe the testing strategies to be employed.
+ -- Run a suite of automated regression test against the acceptance criteria using cypress
+- List the deliverable elements of the test activities.
+ -- Test report and visible test artefacts 
+
+#### Resource
+List RS/FS Documentation and location or reference PBI’s where the requirements are located
+Test files
+js
+Feature
+https://viewpoint.glasslewis.com/WD/?siteId=DemoClient
+Cypress 
+
+
+#### In Scope
+- Login page error message
+- Country Filter
+- Account vote card hyper link 
+
+
+
+#### Out of Scope
+- Login verification
+- API testing
+
+
+#### Test Methods
+
+All testing is automated using Cypress
+
+
+
+
+#### Test Tools
+- Cypress
+- Cucumber
+- Cucumber test reporter
+
+
+#### Infrastructure
+https://viewpoint.glasslewis.com/WD/?siteId=DemoClient
+
+Assumptions and Risks
+
 Software QA Engineer - Code Challenge 2021
 "stepDefinitions": "cypress/support/step_definitions/",
 Question 1 - Requirements
@@ -52,8 +117,14 @@ Extra points (optional):
 •         Testing configuration settings are passed as environment variables
 •         Tests can be configured to run on various browser
 
-Broken company filter and incomplete list 
+#### Bugs 
+- Broken company filter vs link date and  incomplete checkbox list 
+
+![Accountname](accountname.png)
+
+- When you filter country by string select all is highlighted 
+
+
+![Selectbytestfilters](selectbytestfilters.png)
  
 Many update the default filter by country when more than one selected rather than by account name 
- 
-

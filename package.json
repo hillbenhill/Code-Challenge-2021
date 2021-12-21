@@ -8,7 +8,7 @@
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true,
-    "stepDefinitions": "cypress/support/step_definitions/",
+    "stepDefinitions": "cypress/integration/DemoTests/",
     "cucumberJson": {
       "generate": true,
       "outputFolder": "cypress/cucumber-json",
